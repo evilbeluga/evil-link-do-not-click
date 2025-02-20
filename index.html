@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #ffebee;
+        }
+        h1 {
+            font-size: 18px;
+            color: #d81b60;
+        }
+        #dino {
+            width: 200px;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body onclick="celebrate()">
+    <h1>A very cosmic congratulations for making it to the Dean's List! 🎉<br>
+        Yippee! Continue crushing the competition <br>
+        - From your favourite child 💖
+    </h1>
+    <img id="dino" src="Social_dino_with_hat.gif" alt="Dino with party hat">
+
+    <script>
+        function celebrate() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
